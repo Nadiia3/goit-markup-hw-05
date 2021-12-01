@@ -73,11 +73,11 @@ img {
 }  
 .header-list {
      display: flex;
-     align-items: center;
      margin-left: 93px;
 }
 .header-navigation{
    display: flex;
+   align-items: center;
 }
 .header-list .header-item + .header-item {
   margin-left: 50px;
@@ -97,14 +97,14 @@ img {
 }
 
 .header-logo {
-  display: inline-block;
+  display: inline;
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
-  text-align: center;
+
 }
 .header-studio {
   font-family: Raleway;

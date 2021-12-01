@@ -9,6 +9,8 @@
     --main-btn-color:#FFFFFF;
     --second-btn-color: #212121;
     --header-text-color:  #212121;
+    --duration: 250ms;
+    --function-animator: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -25,6 +27,9 @@ body {
 }
 h1, h2, h3, p, ul{
     margin: 0;
+}
+a {
+  text-decoration: none;
 }
 
 .list {
@@ -537,7 +542,7 @@ margin-left: 10px;
      height: 38px;
      min-width: 73px;
      padding: 6px 22px;
-      border: 0;
+     border: 0;
      font-weight: 500;
      font-size: 16px;
      line-height: 1.63;
@@ -546,6 +551,10 @@ margin-left: 10px;
      color: var(--second-title-color);
      background: #f5f4fa;;
      border-radius: 4px; 
+
+      transition-property: background-color, color, box-shadow;
+      transition-duration: var(--duration)
+      transition-timing-function: var(--function-animator)
 }
 
 .portfolio-btn:hover,
@@ -589,6 +598,47 @@ margin-left: 10px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 
   1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.projects-overlay {
+  position: relative;
+	overflow: hidden;
+  background-color: #2196f3;
+}
+.projects-overlay::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform var(--duration) var(--function-animation);
+}
+.projects-item:hover .projects-overlay,
+.projects-item:focus .projects-overlay {
+  transform: translateY(0);
+}
+.projects-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+  transform: translateY(100%);
+  transition: transform var(--duration) var(--function-animation);
+}
+.projects-item:hover .projects-text,
+.projects-item:focus .projects-text {
+  opacity: 1;
+  transform: translateY(0);
 
 .projects-title {
     margin-bottom: 4px;

@@ -553,8 +553,8 @@ margin-left: 10px;
      border-radius: 4px; 
 
       transition-property: background-color, color, box-shadow;
-      transition-duration: var(--duration)
-      transition-timing-function: var(--function-animator)
+      transition-duration: var(--duration);
+      transition-timing-function: var(--function-animator);
 }
 
 .portfolio-btn:hover,
@@ -617,11 +617,12 @@ margin-left: 10px;
 .projects-item:focus .projects-overlay {
   transform: translateY(0);
 }
+
 .projects-text {
   position: absolute;
   top: 0;
   left: 0;
-
+  background-color: #2196f3;
   width: 100%;
   height: 100%;
   padding: 63px 24px;
@@ -639,26 +640,25 @@ margin-left: 10px;
 .projects-item:focus .projects-text {
   opacity: 1;
   transform: translateY(0);
-
+}
 .projects-title {
-    margin-bottom: 4px;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: var(--second-title-color);
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--second-title-color);
 }
 .projects-after-title {
-     font-weight: normal;
-     font-size: 16px;
-     line-height: 1.87;
-     letter-spacing: 0.03em;
-     color: var(--third-title-color);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03;
+  color: var(--third-title-color);
 }
-
 .card {
   padding: 20px 24px;
-  background: white;
+  background: var(--main-title-color);
   border: 1px solid #eeeeee;
   border-top: none;
 }

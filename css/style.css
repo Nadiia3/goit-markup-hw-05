@@ -603,10 +603,22 @@ margin-left: 10px;
   position: relative;
   overflow: hidden;
 }
+.projects-overlay::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform var(--duration) var(--function-animator);
+}
+
 .projects-item:hover .projects-overlay::before,
 .projects-item:focus .projects-overlay::before {
 transform: translateY(0);
 }
+
 .projects-text {
   position: absolute;
   top: 0;

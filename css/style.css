@@ -292,6 +292,13 @@ align-items: center;
    opacity: 0;
    pointer-events: none;
  }
+ .close-icon {
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   width: 11px;
+   height: 11px;
+  }
 
  
 
